@@ -1,0 +1,9 @@
+{
+  "repos": [
+    {
+      "id": "play",
+      "organisation": "Bitcoin Difficulty",
+      "repository": "bitcoin-difficulty"
+    }
+  ]
+}

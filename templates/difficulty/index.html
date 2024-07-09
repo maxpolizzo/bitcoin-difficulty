@@ -1,0 +1,59 @@
+{% extends "base.html" %} {% from "macros.jinja" import window_vars with context
+%} {% block scripts %} {{ window_vars(user) }}
+<script type="module" src="/play/static/js/index.js"></script>
+<!-- CDNJS :: Sortable (https://cdnjs.com/) -->
+<script src="//cdn.jsdelivr.net/npm/sortablejs@1.8.4/Sortable.min.js"></script>
+<!-- CDNJS :: Vue.Draggable (https://cdnjs.com/) -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/Vue.Draggable/2.20.0/vuedraggable.umd.min.js"></script>
+{% endblock %} {% block page %}
+<link rel="stylesheet" href="/play/static/css/difficulty.css"/>
+<div id="difficulty" class="row q-col-gutter-md">
+  <!-- Welcome view -->
+  <div class="col-12 q-gutter-y-md">
+    <q-card>
+      <div style="padding: 1em; font-size: 1.2em;">
+        <div class="row">
+          <span class="col-6" :style="reactiveStyles.welcomeText">
+             Welcome to Bitcoin Difficulty!
+          </span>
+          <span class="col-6" style="margin-top: 1em; font-size:0.75em">
+            <q-btn row color="orange" icon="account_balance" :style="reactiveStyles.newGameButton" @click="createGame()">
+              <span style="margin-left:0.25em;">New game</span>
+            </q-btn>
+          </span>
+        </div>
+        <div class="row">
+          <span class="col-12 col-md-12" style="margin-top: 1.5em; font-size: 0.87em">
+                Create a new game or load an existing game from the table below
+          </span>
+        </div>
+        <!-- Game records table -->
+        <div style="margin-top: 1em">
+          <div v-if="loading" class="offset-5 col-2 offset-md-5 col-md-2" style="margin-top: 2em; margin-bottom: 2em; display: flex; justify-content: center;">
+            <q-spinner
+              color="orange"
+              size="2em"
+            />
+          </div>
+          <q-table
+            v-else
+            title="Saved games"
+            dense
+            :data="gameRecords.rows"
+            :columns="gameRecords.columns"
+            row-key="name"
+            :rows-per-page-options="[25]"
+            hide-bottom
+          >
+            <template v-slot:body-cell-load="props">
+              <q-td :props="props">
+                <q-btn dense round flat color="grey" icon="play_circle" @click="loadSavedGame(props.row)"></q-btn>
+              </q-td>
+            </template>
+          </q-table>
+        </div>
+      </div>
+    </q-card>
+  </div>
+</div>
+{% endblock %}

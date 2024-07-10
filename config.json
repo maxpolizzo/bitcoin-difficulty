@@ -1,7 +1,7 @@
 {
   "name": "Bitcoin Difficulty",
-  "short_description": "A strategy board game about Bitcoin mining and stacking sats",
-  "tile": "/play/static/images/thumbnail.png",
+  "short_description": "A strategy board game about Bitcoin mining and stacking sats, rocking Lightning wallets and packed with Bitcoin culture and education pills",
+  "tile": "/play/static/images/thumbnail.jpg",
   "min_lnbits_version": "0.12.8",
   "contributors": [
     {
@@ -12,20 +12,19 @@
   ],
   "images": [
     {
-      "uri": "https://raw.githubusercontent.com/maxpolizzo/bitcoin-difficulty/main/static/images/bitcoin_difficulty_banner.png",
       "link": "https://geyser.fund/project/bitcoindifficulty"
     },
     {
-      "uri": "https://raw.githubusercontent.com/maxpolizzo/bitcoin-difficulty/main/static/images/app_design_prototype.png"
+      "uri": "https://raw.githubusercontent.com/maxpolizzo/bitcoin-difficulty/main/static/images/app_design_prototype.jpg"
     },
     {
-      "uri": "https://raw.githubusercontent.com/maxpolizzo/bitcoin-difficulty/main/static/images/board_prototype.png"
+      "uri": "https://raw.githubusercontent.com/maxpolizzo/bitcoin-difficulty/main/static/images/board_prototype.jpg"
     },
     {
-      "uri": "https://raw.githubusercontent.com/maxpolizzo/bitcoin-difficulty/main/static/images/group_playing_bitcoin_difficulty.png"
+      "uri": "https://raw.githubusercontent.com/maxpolizzo/bitcoin-difficulty/main/static/images/group_playing_bitcoin_difficulty.jpg"
     },
     {
-      "uri": "https://raw.githubusercontent.com/maxpolizzo/bitcoin-difficulty/main/static/images/tfw_playing_bitcoin_difficulty.png"
+      "uri": "https://raw.githubusercontent.com/maxpolizzo/bitcoin-difficulty/main/static/images/tfw_playing_bitcoin_difficulty.jpg"
     }
   ],
   "description_md": "https://raw.githubusercontent.com/maxpolizzo/bitcoin-difficulty/main/description.md",

@@ -980,12 +980,12 @@ new Vue({
           } else {
             let res = await LNbits.api
               .request(
-                'GET',
-                '/play/api/v1/players/pay_link?game_id=' + this.game.id + '&pay_link_player_index=' + this.game.invoiceRecipientIndex,
-                inkey(this.game)
+                  'GET',
+                  '/play/api/v1/player_pay_link?game_id=' + this.game.id + '&pay_link_player_index=' + this.game.invoiceRecipientIndex,
+                  inkey(this.game)
               )
             if(res.data) {
-              invoiceRecipientPayLink = res.data.player_pay_link
+              invoiceRecipientPayLink = res.data.pay_link
             } else {
               LNbits.utils.notifyApiError(res.error)
             }

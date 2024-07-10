@@ -169,9 +169,11 @@ async def api_difficulty_player_invite(
     # Create player account and wallet
     invited_player = await invite_player(game_id)
     logger.info(f"Created account and wallet for {invited_player.name} ({invited_player.id})")
-    # Enable extension for player
-    logger.info(f"Enabling extension for {invited_player.name} ({invited_player.id})")
+    # Enable play, lnurlp and withdraw extensions for player
+    logger.info(f"Enabling play, lnurlp and withdraw extensions for {invited_player.name} ({invited_player.id})")
     await update_user_extension(user_id=invited_player.id, extension="play", active=True)
+    await update_user_extension(user_id=invited_player.id, extension="lnurlp", active=True)
+    await update_user_extension(user_id=invited_player.id, extension="withdraw", active=True)
     # Redirect
     redirectUrl = request.url._url.split("play/api/v1/")[0] + "play/invite?usr=" + invited_player.id + "&game_id=" + game_id + "&client_id=" + invited_player.client_id + "&invite_voucher=" + invite_voucher
     return RedirectResponse(redirectUrl)

@@ -5,6 +5,7 @@ from starlette.responses import HTMLResponse
 
 from lnbits.core.models import User
 from lnbits.decorators import check_user_exists
+from lnbits.core.crud import update_user_extension
 
 from . import play_ext, difficulty_renderer, websocketManager
 from .models import PlayerWalletInfo
@@ -23,6 +24,11 @@ async def index(
     request: Request,
     user: User = Depends(check_user_exists),
 ):
+    # Enable lnurlp and withdraw extensions for user
+    logger.info(f"Enabling lnurlp and withdraw extensions for user {user.id}")
+    await update_user_extension(user_id=user.id, extension="lnurlp", active=True)
+    await update_user_extension(user_id=user.id, extension="withdraw", active=True)
+    
     return difficulty_renderer().TemplateResponse(
         "/index.html", {"request": request, "user": user.dict()}
     )

@@ -449,7 +449,7 @@ new Vue({
       let res = await LNbits.api
         .request(
           'POST', '/lnurlp/api/v1/links',
-          inkey(this.game),
+          freeMarketWallet(this.game).adminkey,
           payLNURLData
         );
       if(res.data) {

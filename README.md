@@ -1,4 +1,4 @@
-![Banner](./static/images/bitcoin_difficulty_banner.png)
+![Banner](./static/images/bitcoin_difficulty_banner.jpg)
 
 Bitcoin Difficulty
 ==================
@@ -27,10 +27,10 @@ the other hand, playing the _fiat_ game could be a good strategy as the bank wil
 finance players who consistently honor their interest payments.
 
 ## Board prototype (work in progress)
-![Game board prototype](./static/images/board_prototype.png)
+![Game board prototype](./static/images/board_prototype.jpg)
 
 ## App design prototype (work in progress)
-![App design prototype](./static/images/app_design_prototype.png)
+![App design prototype](./static/images/app_design_prototype.jpg)
 
 ## How to play
 To play the game you'll need the physical game board with two dices and a pawn for each player. Each player will also

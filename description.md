@@ -1,5 +1,3 @@
-### A strategy board game about Bitcoin mining and stacking sats, rocking Lightning wallets and packed with Bitcoin culture and education pills.
-
 **Buy power stations and fire up your Bitcoin miners, hodl your hard-earned sats to survive through halvings, bear 
 markets and difficulty adjustments, avoid getting rekt by black swans or government regulations and build the most 
 profitable Bitcoin mining operation to win the game!**

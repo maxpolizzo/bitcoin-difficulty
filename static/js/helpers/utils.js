@@ -58,7 +58,7 @@ export async function createPlayerPayLNURL(game) {
   let res = await LNbits.api.request(
     'POST',
     '/lnurlp/api/v1/links',
-    playerWallet(game).inkey,
+    playerWallet(game).adminkey,
     payLNURLData
   );
   if(res.data) {

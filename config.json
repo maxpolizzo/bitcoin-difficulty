@@ -1,6 +1,33 @@
 {
   "name": "Bitcoin Difficulty",
-  "short_description": "Play Bitcoin Difficulty",
-  "icon": "grid_view",
-  "contributors": ["maxpolizzo"]
+  "short_description": "A strategy board game about Bitcoin mining and stacking sats",
+  "tile": "/play/static/images/thumbnail.png",
+  "min_lnbits_version": "0.12.8",
+  "contributors": [
+    {
+      "name": "maxpolizzo",
+      "uri": "https://github.com/maxpolizzo",
+      "role": "Developer"
+    }
+  ],
+  "images": [
+    {
+      "uri": "https://raw.githubusercontent.com/maxpolizzo/bitcoin-difficulty/main/static/images/bitcoin_difficulty_banner.png",
+      "link": "https://geyser.fund/project/bitcoindifficulty"
+    },
+    {
+      "uri": "https://raw.githubusercontent.com/maxpolizzo/bitcoin-difficulty/main/static/images/app_design_prototype.png"
+    },
+    {
+      "uri": "https://raw.githubusercontent.com/maxpolizzo/bitcoin-difficulty/main/static/images/board_prototype.png"
+    },
+    {
+      "uri": "https://raw.githubusercontent.com/maxpolizzo/bitcoin-difficulty/main/static/images/group_playing_bitcoin_difficulty.png"
+    },
+    {
+      "uri": "https://raw.githubusercontent.com/maxpolizzo/bitcoin-difficulty/main/static/images/tfw_playing_bitcoin_difficulty.png"
+    }
+  ],
+  "description_md": "https://raw.githubusercontent.com/maxpolizzo/bitcoin-difficulty/main/description.md",
+  "license": "MIT"
 }
